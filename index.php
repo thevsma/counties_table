@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Estados do Brasil</title>
 </head>
 <body>
@@ -447,6 +448,34 @@
                 ),
             ];
         ?>
+
+        <h1>Lista sintética</h1>
+
+        <table>
+            <thead>
+                <?php
+                    foreach ($countiesdata as $keydata => $valuedata) {
+                        echo '<tr>';
+                        foreach ($valuedata as $key => $value) {
+                            echo "<th>$key</th>";
+                        }
+                        echo '</tr>';
+                        break;
+                    }
+                ?>
+            </thead>
+
+            <tbody>
+                <?php
+                    foreach ($countiesdata as $keydata => $valuedata) {
+                        echo '<tr>';
+                        foreach ($valuedata as $key => $value) {
+                            echo $key === 'Bandeira' ? "<td><img src=\"$value\" alt=\"\" width=\"45px\"></td>" : "<td>$value</td>";
+                        }
+                    }
+                ?>
+            </tbody>
+        </table>
     </main>
     <footer>
         <p>&copy;2023 - Matheus Vieira</p>
