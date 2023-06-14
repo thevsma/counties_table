@@ -454,10 +454,10 @@
         <table>
             <thead>
                 <?php
-                    foreach ($countiesdata as $keydata => $valuedata) {
+                    foreach ($countiesdata as $county => $countydata) {
                         echo '<tr>';
-                        foreach ($valuedata as $key => $value) {
-                            echo "<th>$key</th>";
+                        foreach ($countydata as $type => $info) {
+                            echo "<th>$type</th>";
                         }
                         echo '</tr>';
                         break;
@@ -467,10 +467,10 @@
 
             <tbody>
                 <?php
-                    foreach ($countiesdata as $keydata => $valuedata) {
+                    foreach ($countiesdata as $county => $countydata) {
                         echo '<tr>';
-                        foreach ($valuedata as $key => $value) {
-                            echo $key === 'Bandeira' ? "<td><img src=\"$value\" alt=\"\" width=\"50px\"></td>" : "<td>$value</td>";
+                        foreach ($countydata as $type => $info) {
+                            echo $type === 'Bandeira' ? "<td><img src=\"$info\" alt=\"\" width=\"50px\"></td>" : "<td>$info</td>";
                         }
                     }
                 ?>
