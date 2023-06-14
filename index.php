@@ -470,7 +470,7 @@
                     foreach ($countiesdata as $keydata => $valuedata) {
                         echo '<tr>';
                         foreach ($valuedata as $key => $value) {
-                            echo $key === 'Bandeira' ? "<td><img src=\"$value\" alt=\"\" width=\"45px\"></td>" : "<td>$value</td>";
+                            echo $key === 'Bandeira' ? "<td><img src=\"$value\" alt=\"\" width=\"50px\"></td>" : "<td>$value</td>";
                         }
                     }
                 ?>
